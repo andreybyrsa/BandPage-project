@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+    <!-- Css link -->
+    <link href="style.css" rel="stylesheet">
+    <title>BandPage</title>
+</head>
+<body>
+
+
+    <!-- Sprite -->
+    <svg style="display: none;">
+        <symbol id="sharing" viewBox="0 0 227.216 227.216">
+            <g>
+                <path d="M175.897,141.476c-13.249,0-25.11,6.044-32.98,15.518l-51.194-29.066c1.592-4.48,2.467-9.297,2.467-14.317
+	            c0-5.019-0.875-9.836-2.467-14.316l51.19-29.073c7.869,9.477,19.732,15.523,32.982,15.523c23.634,0,42.862-19.235,42.862-42.879
+                C218.759,19.229,199.531,0,175.897,0C152.26,0,133.03,19.229,133.03,42.865c0,5.02,0.874,9.838,2.467,14.319L84.304,86.258
+                c-7.869-9.472-19.729-15.514-32.975-15.514c-23.64,0-42.873,19.229-42.873,42.866c0,23.636,19.233,42.865,42.873,42.865
+                c13.246,0,25.105-6.042,32.974-15.513l51.194,29.067c-1.593,4.481-2.468,9.3-2.468,14.321c0,23.636,19.23,42.865,42.867,42.865
+                c23.634,0,42.862-19.23,42.862-42.865C218.759,160.71,199.531,141.476,175.897,141.476z M175.897,15
+                c15.363,0,27.862,12.5,27.862,27.865c0,15.373-12.499,27.879-27.862,27.879c-15.366,0-27.867-12.506-27.867-27.879
+                C148.03,27.5,160.531,15,175.897,15z M51.33,141.476c-15.369,0-27.873-12.501-27.873-27.865c0-15.366,12.504-27.866,27.873-27.866
+                c15.363,0,27.861,12.5,27.861,27.866C79.191,128.975,66.692,141.476,51.33,141.476z M175.897,212.216
+                c-15.366,0-27.867-12.501-27.867-27.865c0-15.37,12.501-27.875,27.867-27.875c15.363,0,27.862,12.505,27.862,27.875
+                C203.759,199.715,191.26,212.216,175.897,212.216z"/>
+            </g>
+        </symbol>
+
+        <symbol id="telegram" viewBox="0 0 50 50">
+            <g>
+                <path d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"/>
+            </g>
+        </symbol>
+
+        <symbol id="whatsapp" viewBox="0 0 24 24">
+            <g>
+                <path d="M19.077,4.928C17.191,3.041,14.683,2.001,12.011,2c-5.506,0-9.987,4.479-9.989,9.985c-0.001,1.76,0.459,3.478,1.333,4.992L2,22l5.233-1.237c1.459,0.796,3.101,1.215,4.773,1.216h0.004c5.505,0,9.986-4.48,9.989-9.985C22.001,9.325,20.963,6.816,19.077,4.928z M12.007,19.979c-1.333-0.001-2.653-0.337-3.816-0.972L7.518,18.64l-0.745,0.176l-1.968,0.465l0.481-1.784l0.216-0.802l-0.415-0.719c-0.698-1.208-1.066-2.588-1.065-3.991C4.024,7.583,7.607,4,12.01,4c2.136,0.001,4.143,0.833,5.652,2.341c1.509,1.51,2.339,3.517,2.337,5.651C19.997,16.396,16.413,19.979,12.007,19.979z"/><path d="M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767c-0.125-0.167-1.019-1.353-1.019-2.581S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006c0.178,0.007,0.375,0.016,0.562,0.431c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416c-0.125,0.146-0.262,0.325-0.374,0.437c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728c0.954,0.85,1.757,1.113,2.007,1.239c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812c0.25,0.125,0.416,0.187,0.478,0.291C17.106,14.471,17.106,14.971,16.898,15.554z"/>
+            </g>
+        </symbol>
+
+        <symbol id="viber" viewBox="0 0 100 100">
+            <g>
+                <path fill="#fff" d="M53.814 7.592C77.02 11.16 87.722 22.194 90.677 45.567c.274 2.159-.53 5.407 2.55 5.467 3.219.062 2.443-3.139 2.47-5.3C95.969 23.721 76.776 3.315 54.485 2.563c-1.682.242-5.162-1.16-5.379 2.61C48.962 7.714 51.892 7.296 53.814 7.592zM89.405 71.246c-7.788-5.494-17.581-16.008-25.212-4.297-2.547 3.856-6.112 4.024-9.84 2.333-10.277-4.66-18.212-11.839-22.861-22.285-5.482-12.975 7.939-10.538 7.69-19.584-.268-4.925-12.225-21.383-16.947-23.12-1.954-.719-3.9-.672-5.888-.004C5.276 8.013.69 17.119 5.082 27.901c13.103 32.167 36.162 54.561 67.904 68.229 1.81.778 3.82 1.089 4.838 1.369 7.227.073 15.692-6.89 18.137-13.8C98.314 77.052 93.34 74.413 89.405 71.246z" clip-rule="evenodd"/>
+                <path fill="#fff" fill-rule="evenodd" d="M58.353,14c-2.232-0.269-5.179-1.321-5.7,1.777c-0.545,3.251,2.739,2.921,4.85,3.393
+                c14.332,3.203,19.322,8.42,21.682,22.636c0.345,2.073-0.34,5.299,3.182,4.764c2.61-0.398,1.668-3.163,1.886-4.778
+                C84.369,28.143,72.673,15.72,58.353,14z" clip-rule="evenodd"/>
+                <path fill="#fff" fill-rule="evenodd" d="M59.669,25.161c-1.49,0.037-2.952,0.198-3.5,1.79c-0.822,2.38,0.908,2.947,2.669,3.23
+                c5.879,0.944,8.973,4.411,9.561,10.274c0.159,1.591,1.169,2.881,2.706,2.699c2.13-0.254,2.323-2.15,2.257-3.951
+                C73.468,32.617,66.023,25.004,59.669,25.161z" clip-rule="evenodd"/>
+            </g>
+        </symbol>
+
+        <symbol id="vk" viewBox="0 0 48 48">
+            <g>
+                <path d="M45.763,35.202c-1.797-3.234-6.426-7.12-8.337-8.811c-0.523-0.463-0.579-1.264-0.103-1.776 c3.647-3.919,6.564-8.422,7.568-11.143C45.334,12.27,44.417,11,43.125,11l-3.753,0c-1.237,0-1.961,0.444-2.306,1.151 c-3.031,6.211-5.631,8.899-7.451,10.47c-1.019,0.88-2.608,0.151-2.608-1.188c0-2.58,0-5.915,0-8.28 c0-1.147-0.938-2.075-2.095-2.075L18.056,11c-0.863,0-1.356,0.977-0.838,1.662l1.132,1.625c0.426,0.563,0.656,1.248,0.656,1.951 L19,23.556c0,1.273-1.543,1.895-2.459,1.003c-3.099-3.018-5.788-9.181-6.756-12.128C9.505,11.578,8.706,11.002,7.8,11l-3.697-0.009 c-1.387,0-2.401,1.315-2.024,2.639c3.378,11.857,10.309,23.137,22.661,24.36c1.217,0.12,2.267-0.86,2.267-2.073l0-3.846 c0-1.103,0.865-2.051,1.977-2.079c0.039-0.001,0.078-0.001,0.117-0.001c3.267,0,6.926,4.755,8.206,6.979 c0.368,0.64,1.056,1.03,1.8,1.03l4.973,0C45.531,38,46.462,36.461,45.763,35.202z"/>
+            </g>
+
+        </symbol>
+
+        <symbol id="close" viewBox="0 0 32 32">
+            <g>
+                <path fill="#fff" d="M17 2C8.716 2 2 8.716 2 17s6.716 15 15 15 15-6.716 15-15S25.284 2 17 2zm0 28C9.832 30 4 24.168 4 17S9.832 4 17 4s13 5.832 13 13-5.832 13-13 13zm5.536-19.95l-5.498 5.498-4.93-5.498a1 1 0 0 0-1.414 1.414l4.932 5.498-5.574 5.574a1 1 0 0 0 1.414 1.414l5.498-5.498 4.932 5.498a1 1 0 0 0 1.414-1.414l-4.934-5.498 5.574-5.574a1 1 0 0 0-1.414-1.414z"/>
+            </g>
+        </symbol>
+
+        <symbol id="copy" viewBox="0 0 100 101">
+            <g>
+                <path d="M26.282,15.341l0,-9.927c0,-2.161 1.753,-3.914 3.914,-3.914l32.419,0c1.031,-0.003 2.045,0.402 2.798,1.166l21.018,21.309c0.737,0.747 1.127,1.739 1.127,2.748l0,55.023c0,2.161 -1.752,3.914 -3.914,3.914l-9.926,0l0,9.926c0,2.162 -1.753,3.914 -3.914,3.914l-53.448,0c-2.162,0 -3.914,-1.752 -3.914,-3.914l0,-76.331c0,-2.162 1.752,-3.914 3.914,-3.914l9.926,0Zm0,3.914l-9.926,0l0,76.331l53.448,0l0,-9.926l-39.608,0c-2.161,0 -3.914,-1.753 -3.914,-3.914l0,-62.491Zm32.43,-13.841l-28.516,0l0,76.332l53.448,0l0,-51.109l-21.018,0c-2.161,0 -3.914,-1.752 -3.914,-3.914l0,-21.309Zm3.914,0l0,21.309l21.018,0l-21.018,-21.309Z"/>
+            </g>
+        </symbol>
+
+        <symbol id="youtube" viewBox="0 0 72 72">
+            <g>
+                <path d="M61.115,18.856C63.666,21.503,64,25.709,64,36s-0.334,14.497-2.885,17.144C58.563,55.791,55.906,56,36,56	s-22.563-0.209-25.115-2.856C8.334,50.497,8,46.291,8,36s0.334-14.497,2.885-17.144S16.094,16,36,16S58.563,16.209,61.115,18.856z M31.464,44.476l13.603-8.044l-13.603-7.918V44.476z"/>
+            </g>
+        </symbol>
+
+        <symbol id="vksvg" viewBox="0 0 64 64">
+            <g>
+                <path d="M40.227,12C51.146,12,52,12.854,52,23.773v16.453C52,51.145,51.146,52,40.227,52H23.773C12.854,52,12,51.145,12,40.227	V23.773C12,12.854,12.854,12,23.773,12H40.227z M43.851,39.792c0.723,0,1.914-0.119,1.008-1.628	c-0.076-0.125-0.528-1.115-2.72-3.152c-1.867-1.74-1.771-1.931,0.691-5.543c1.973-2.895,2.269-3.423,2.12-3.906	c-0.138-0.445-0.307-0.618-1.33-0.618c-0.888,0-3.105-0.057-3.822-0.057c-1.083,0-1.238,0.795-2.761,3.891	c-1.232,2.504-1.868,3.251-2.405,3.251c-0.613,0-0.937-0.639-0.937-3.021c0-3.384,0.161-4.802-2.814-4.802	c-4.16,0-4.351,0.976-3.856,1.214c0.614,0.294,1.453,0.651,1.453,2.391c0,2.549,0.015,4.057-0.72,4.057	c-0.735,0-1.121-0.344-2.695-3.212c-1.854-3.378-1.844-3.768-3.152-3.768c-1.056,0-2.488,0-3.419,0c-0.68,0-0.875,0.554-0.705,0.963	c0.216,0.518,3.29,7.474,6.531,10.758s6.552,3.184,7.036,3.184c0.153,0,0.705,0,0.904,0c1.015,0,1.378-0.579,1.465-1.049	c0.294-1.587,0.389-2.524,1.012-2.524c0.595,0,0.961,0.368,3.639,3.066c0.33,0.332,0.619,0.507,1.49,0.507	C40.738,39.792,43.128,39.792,43.851,39.792z"/>
+            </g>
+        </symbol>
+
+        <symbol id="play" viewBox="0 0 24 24">
+            <g>
+                <path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
+            </g>
+        </symbol>
+
+        <symbol id="pause" viewBox="0 0 24 24">
+            <g>
+                <path d="M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z"/>
+            </g>
+        </symbol>
+
+        <symbol id="dots" viewBox="0 0 16 16">
+            <g>
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </g>
+        </symbol>
+    </svg>
+
+
+    <!-- Background -->
+
+    <div class="bg__fixed">
+        <div class="background__img" style="background-image:url(img/logo.PNG);background-color: #fff;"></div>
+    </div>
+
+
+    <!-- Header -->
+    
+    <div class="header">
+        <div class="container">
+            <button class="intro__text__1" type="button">Альбом</button>
+            <button class="intro__text__2" type="button">Релиз</button>
+        </div>
+    </div>
+
+
+    <!-- Card 1 -->
+
+    <div class="music__card__1">
+        <div class="logo">
+            <img class="media__logo" width="400" src="img/logo.PNG" alt="ФРИРИО 2">
+            <div class="pageLink" style="color: transparent; position: absolute;">site</div>
+        </div>
+
+        <div class="artists">
+            <div class="container">
+                <div class="artist">OG Buda & YN Jay</div>
+
+                <div class="song">
+                    <div class="song__name">ФРИРИО</div>
+
+                    <button class="share__button" type="button">
+                        <svg class="sharing__icon">
+                            <use xlink:href="#sharing"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <a class="band__link" href="https://band.link/" target="_blank">BandLink Music<span class="material-symbols-outlined">music_note</span></a>
+            </div>
+
+            <div class="sharing__block">
+                <div class="inner__sharing">
+                    
+                    <a style="background-color: #37aee2;" class="icon__button" href="https://telegram.me/share/url?url=">
+                        <svg style="height: 20px;" class="icon">
+                            <use xlink:href="#telegram"></use>
+                        </svg>
+                    </a>
+
+                    <a style="background-color: #1cd741;" class="icon__button" href="whatsapp://send?text=">
+                        <svg style="height: 25px;" class="icon">
+                            <use xlink:href="#whatsapp"></use>
+                        </svg>
+                    </a>
+
+                    <a style="background-color: #844ea3;" class="icon__button" href="viber://forward?text=">
+                        <svg style="height: 18px;" class="icon">
+                            <use xlink:href="#viber"></use>
+                        </svg>
+                    </a>
+
+                    <a style="background-color: #44678d;" class="icon__button" href="https://vk.com/share.php?url=">
+                        <svg style="height: 22px;" class="icon">
+                            <use xlink:href="#vk"></use>
+                        </svg>
+                    </a>
+
+                    <button class="copy__icon__button" type="button">
+                        <svg style="height: 22px;" class="copy__icon">
+                            <use xlink:href="#copy"></use>
+                        </svg>
+                    </button>
+
+                    <button class="icon__button close-icon" type="button">
+                        <svg style="height: 30px;" class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="zindex__block"></div>
+        </div>
+
+        <div class="link__block">
+            <a class="music__link" href="https://vk.com/audio-2001688138_108688138" target="_blank">
+                <div class="container__inner">
+                    <div class="inner__block">
+                        <img width="35" src="img/icons/vkmusic.PNG"/>
+                        <div class="muisc__name">VK Музыка</div>
+                    </div>
+    
+                    <button class="listen__button" type="button">
+                        <div class="button__text">Слушать</div>
+                    </button>
+                </div>
+            </a>
+        </div>
+
+        <div class="link__block">
+            <a class="music__link" href="https://music.apple.com/ru/album/%D1%84%D1%80%D0%B8%D1%80%D0%B8%D0%BE-%D0%B1-%D1%8F-feat-yn-jay/1620150223?i=1620150966" target="_blank">
+                <div class="container__inner">
+                    <div class="inner__block">
+                        <img width="38" src="img/icons/applemusic.PNG"/>
+                        <div class="muisc__name">Apple Music</div>
+                    </div>
+    
+                    <button class="listen__button" type="button">
+                        <div class="button__text">Слушать</div>
+                    </button>
+                </div>
+            </a>
+        </div>
+
+        <div class="link__block">
+            <a class="music__link" href="https://music.yandex.ru/album/22400827/track/104242347" target="_blank">
+                <div class="container__inner">
+                    <div class="inner__block">
+                        <img width="35" src="img/icons/yandexmusic.PNG"/>
+                        <div class="muisc__name">Yandex Music</div>
+                    </div>
+    
+                    <button class="listen__button" type="button">
+                        <div class="button__text">Слушать</div>
+                    </button>
+                </div>
+            </a>
+        </div>
+
+        <div class="link__block">
+            <a class="music__link" href="https://open.spotify.com/track/1Hqq9dJfL8xiWUJ7HvEbfU" target="_blank">
+                <div class="container__inner">
+                    <div class="inner__block">
+                        <img width="35" src="img/icons/spotify.png"/>
+                        <div class="muisc__name">Spotify</div>
+                    </div>
+    
+                    <button class="listen__button" type="button">
+                        <div class="button__text">Слушать</div>
+                    </button>
+                </div>
+            </a>
+        </div>
+        
+        <div class="feature__block">
+            <a href="https://www.youtube.com/c/OGBUDA" class="footer__button" target="_blank">
+                <svg class="footer__icon">
+                    <use xlink:href="#youtube"></use>
+                </svg>
+            </a>
+
+            <a href="https://vk.com/ogbuda" class="footer__button" target="_blank">
+                <svg style="height: 40px; width: 40px;" class="footer__icon">
+                    <use xlink:href="#vksvg"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer__2">
+        <div class="container">
+            <div class="footer__text">
+                <p>
+                    By using this project, you can't copy any design.
+                </p>
+                <p>
+                    <span style="font-weight: 500;">Copyright</span> © 2022 BandPage.
+                </p>
+            </div>
+
+            <div class="copyright">
+                <a class="copyright__text" href="https://github.com/byrsa04" target="_blank">
+                    <span style="margin-right: 5px;">Made by</span><span class="material-symbols-outlined">star</span> <span style="font-weight: 500;">AndreyByrsa</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Card 2 -->
+
+    <div class="music__card__2">
+        <div class="album">
+            <div style="line-height: 0;">
+                <img class="dunamic__logo" style="line-height: 0;" width="400" height="400" src="img/album_logo.GIF" alt="ФРИРИО 2">
+            </div>
+
+            <div style="width: 100%; height: 80px; background-color: rgb(10, 10, 10); border-bottom:  2px solid #D71A46;"></div>
+
+            <div class="album__container">
+                <div class="album__footer">
+                    <div class="album__text">
+                        <div class="album__name">FREERIO 2</div>
+                        <div class="artist__name">OG Buda</div>
+                        <div class="mucis__type">ХИП-ХОП · 2022</div>
+                    </div>
+    
+                    <div class="player">
+                        <button class="play__button" type="button">
+                            <svg class="play__icon">
+                                <use xlink:href="#play"></use>
+                            </svg>
+                        </button>
+                        <button class="pause__button" type="button">
+                            <svg class="pause__icon">
+                                <use xlink:href="#pause"></use>
+                            </svg>
+                        </button>
+                        <audio id="player" src="audio/ФРИРИО.wav"></audio>
+                    </div>
+
+                    <div class="album__description">OG Buda, Scally Milano, MAYOT и другие артисты на втором альбоме, посвященному Rio Da Yung OG.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="songs" style="margin: 0 auto;">
+        <div class="song__block block-1">
+            <div class="container__id">
+                <div class="song__number">1</div>
+            </div>
+            <div class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        Ты думал я забросил? (Интро)
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-1" src="audio/Ты думал я забросил (Интро).wav"></audio>
+        </div>
+
+        <div class="song__block block-2">
+            <div class="container__id">
+                <div class="song__number">2</div>
+            </div>
+            <div class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        Следующий
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-2" src="audio/Следующий.wav"></audio>
+        </div>
+
+        <div class="song__block block-3">
+            <div class="container__id">
+                <div class="song__number">3</div>
+            </div>
+            <div style="padding: 5px 20px 5px 0;" class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        <div>Любознательность</div>
+                        <div style="margin-top: 3px; font-size: 13; color: rgb(104, 104, 104);">OG Buda & Брутто</div>
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-3" src="audio/Любознательность (feat. Брутто).wav"></audio>
+        </div>
+
+        <div class="song__block block-4">
+            <div class="container__id">
+                <div class="song__number">4</div>
+            </div>
+            <div style="padding: 5px 20px 5px 0;" class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        <div>Грязный</div>
+                        <div style="margin-top: 3px; font-size: 13; color: rgb(104, 104, 104);">OG Buda & Scally Milano & 163ONMYNECK</div>
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-4" src="audio/Грязный (feat. Scally Milano & 163ONMYNECK).wav"></audio>
+        </div>
+
+        <div class="song__block block-5">
+            <div class="container__id">
+                <div class="song__number">5</div>
+            </div>
+            <div class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        Давно
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-5" src="audio/Давно.wav"></audio>
+        </div>
+
+        <div class="song__block block-6">
+            <div class="container__id">
+                <div class="song__number">6</div>
+            </div>
+            <div style="padding: 5px 20px 5px 0;" class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        <div>Флинтана</div>
+                        <div style="margin-top: 3px; font-size: 13; color: rgb(104, 104, 104);">OG Buda & 163ONMYNECK</div>
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-6" src="audio/Флинтана (feat. 163ONMYNECK).wav"></audio>
+        </div>
+
+        <div class="song__block block-7">
+            <div class="container__id">
+                <div class="song__number">7</div>
+            </div>
+            <div class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        Бейбитрон
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-7" src="audio/Бейбитрон.wav"></audio>
+        </div>
+
+        <div class="song__block block-8">
+            <div class="container__id">
+                <div class="song__number">8</div>
+            </div>
+            <div style="padding: 5px 20px 5px 0;" class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        <div>Грусть 2</div>
+                        <div style="margin-top: 3px; font-size: 13; color: rgb(104, 104, 104);">OG Buda & MAYOT</div>
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-8" src="audio/Грусть 2 (feat. MAYOT).wav"></audio>
+        </div>
+
+        <div class="song__block block-9">
+            <div class="container__id">
+                <div class="song__number">9</div>
+            </div>
+            <div class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        ^__^ ;D :3
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-9" src="audio/^__^.wav"></audio>
+        </div>
+
+        <div class="song__block block-10">
+            <div class="container__id">
+                <div class="song__number">10</div>
+            </div>
+            <div style="padding: 5px 20px 5px 0;" class="container__song">
+                <div class="container__text">
+                    <div class="song__text">
+                        <div>Спали</div>
+                        <div style="margin-top: 3px; font-size: 13; color: rgb(104, 104, 104);">OG Buda & SODA LUV</div>
+                    </div>
+                    <div class="icon__block">
+                        <img width="20" src="img/icons/dots.png">
+                    </div>
+                </div>
+            </div>
+            <audio id="player-10" src="audio/Спали (feat. SODA LUV).wav"></audio>
+        </div>
+
+        <a class="learn__more" href="https://music.apple.com/ru/album/freerio-2/1620150223" target="_blank">
+            <div class="text__more">
+                Показать весь альбом
+            </div>
+        </a>
+    </div>
+
+
+    <!-- Footer -->
+
+    <div class="footer__1">
+        <div class="container">
+            <div class="footer__text">
+                <p>
+                    By using this project, you can't copy any design.
+                </p>
+                <p>
+                    <span style="font-weight: 500;">Copyright</span> © 2022 BandPage.
+                </p>
+            </div>
+
+            <div class="copyright">
+                <a class="copyright__text" href="https://github.com/byrsa04" target="_blank">
+                    <span style="margin-right: 5px;">Made by</span><span class="material-symbols-outlined">star</span> <span style="font-weight: 500;">AndreyByrsa</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
