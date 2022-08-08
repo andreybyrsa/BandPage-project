@@ -1070,6 +1070,10 @@ body {
     .container, .container__inner {
         width: 310px;
     }
+
+    .media__container {
+        height: 65px;
+    }
 }
 
 
