@@ -549,6 +549,7 @@ body {
     position: relative;
     text-decoration: none;
     width: 400px;
+    height: 55px;
     background-color: #000;
 }
 
@@ -571,7 +572,9 @@ body {
     padding: 15px 0 15px 18px;
     margin-right: 20px;
 
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .song__number {
@@ -581,10 +584,12 @@ body {
 }
 
 .container__song {
-    padding: 15px 20px 15px 0;
+    padding: 15px 0 15px 0;
 
-    display: inline-block;
+    display: flex;
     width: 100%;
+    height: 100%;
+    align-items: center;
     border-bottom: 1px solid rgb(58, 58, 58);
 }
 
@@ -601,6 +606,15 @@ body {
     font-weight: 400;
 }
 
+.container__dots {
+    padding: 15px 20px 15px 0;
+
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(58, 58, 58);
+}
+
 .icon__block {
     display: flex;
     justify-content: space-between;
@@ -611,11 +625,14 @@ body {
 }
 
 .learn__more {
-    padding: 15px 0;
+    position: relative;
+    padding: 18px 0;
 
     text-decoration: none;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
     background-color: #000;
 }
@@ -628,6 +645,375 @@ body {
     color: #fff;
     font-size: 15px;
     font-weight: 400;
+}
+
+
+/* Share Song */
+
+.share__song {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(58, 58, 58);
+    width: 180px;
+    height: 80px;
+    border-radius: 12px 12px 3px 12px;
+}
+
+.share__line {
+    margin: auto;
+    padding: 0 8px;
+
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px rgb(41, 41, 41) solid;
+    transition: .1s linear;
+}
+
+.share__line:hover {
+    opacity: .7;
+}
+
+.share__line:last-child {
+    border-bottom: none;
+}
+
+.close-block-1, .close-block-2, .close-block-3, .close-block-4, .close-block-5, .close-block-6, .close-block-7, .close-block-8, .close-block-9, .close-block-10, .link-line {
+    cursor: pointer;
+}
+
+.inner__text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.inner__icon {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-1 {
+    z-index: 1;
+}
+
+.block-2 {
+    z-index: 3;
+}
+
+.block-3 {
+    z-index: 5;
+}
+
+.block-4 {
+    z-index: 7;
+}
+
+.block-5 {
+    z-index: 9;
+}
+
+.block-6 {
+    z-index: 11;
+}
+
+.block-7 {
+    z-index: 13;
+}
+
+.block-8 {
+    z-index: 15;
+}
+
+.block-9 {
+    z-index: 17;
+}
+
+.block-10 {
+    z-index: 19;
+}
+
+.block-11 {
+    z-index: 21;
+}
+
+
+.share-1 {
+    z-index: 2;
+    right: 0;
+    top: 532px;
+}
+
+.moveUp1 {
+    display: flex;
+    animation: moveUp1 .1s linear forwards;
+}
+
+@keyframes moveUp1 {
+    from {top: 532px; right: 0;}
+    to {top: 420px; right: 45px;}
+}
+
+.moveReverse1 {
+    display: flex;
+    animation: moveReverse1 .1s linear forwards;
+}
+
+@keyframes moveReverse1 {
+    from {top: 420px; right: 45px;}
+    to {top: 532px; right: 0;}
+}
+
+
+.share-2 {
+    z-index: 4;
+    right: 0;
+    top: 582px;
+}
+
+.moveUp2 {
+    display: flex;
+    animation: moveUp2 .1s linear forwards;
+}
+
+@keyframes moveUp2 {
+    from {top: 582px; right: 0;}
+    to {top: 480px; right: 45px;}
+}
+
+.moveReverse2 {
+    display: flex;
+    animation: moveReverse2 .1s linear forwards;
+}
+
+@keyframes moveReverse2 {
+    from {top: 480px; right: 45px;}
+    to {top: 582px; right: 0;}
+}
+
+
+.share-3 {
+    z-index: 6;
+    right: 0;
+    top: 632px;
+}
+
+.moveUp3 {
+    display: flex;
+    animation: moveUp3 .1s linear forwards;
+}
+
+@keyframes moveUp3 {
+    from {top: 632px; right: 0;}
+    to {top: 530px; right: 45px;}
+}
+
+.moveReverse3 {
+    display: flex;
+    animation: moveReverse3 .1s linear forwards;
+}
+
+@keyframes moveReverse3 {
+    from {top: 530px; right: 45px;}
+    to {top: 632px; right: 0;}
+}
+
+
+.share-4 {
+    z-index: 8;
+    right: 0;
+    top: 682px;
+}
+
+.moveUp4 {
+    display: flex;
+    animation: moveUp4 .1s linear forwards;
+}
+
+@keyframes moveUp4 {
+    from {top: 682px; right: 0;}
+    to {top: 585px; right: 45px;}
+}
+
+.moveReverse4 {
+    display: flex;
+    animation: moveReverse4 .1s linear forwards;
+}
+
+@keyframes moveReverse4 {
+    from {top: 585px; right: 45px;}
+    to {top: 682px; right: 0;}
+}
+
+
+.share-5 {
+    z-index: 10;
+    right: 0;
+    top: 732px;
+}
+
+.moveUp5 {
+    display: flex;
+    animation: moveUp5 .1s linear forwards;
+}
+
+@keyframes moveUp5 {
+    from {top: 732px; right: 0;}
+    to {top: 640px; right: 45px;}
+}
+
+.moveReverse5 {
+    display: flex;
+    animation: moveReverse5 .1s linear forwards;
+}
+
+@keyframes moveReverse5 {
+    from {top: 640px; right: 45px;}
+    to {top: 732px; right: 0;}
+}
+
+
+.share-6 {
+    z-index: 12;
+    right: 0;
+    top: 782px;
+}
+
+.moveUp6 {
+    display: flex;
+    animation: moveUp6 .1s linear forwards;
+}
+
+@keyframes moveUp6 {
+    from {top: 782px; right: 0;}
+    to {top: 695px; right: 45px;}
+}
+
+.moveReverse6 {
+    display: flex;
+    animation: moveReverse6 .1s linear forwards;
+}
+
+@keyframes moveReverse6 {
+    from {top: 695px; right: 45px;}
+    to {top: 782px; right: 0;}
+}
+
+
+.share-7 {
+    z-index: 14;
+    right: 0;
+    top: 832px;
+}
+
+.moveUp7 {
+    display: flex;
+    animation: moveUp7 .1s linear forwards;
+}
+
+@keyframes moveUp7 {
+    from {top: 832px; right: 0;}
+    to {top: 755px; right: 45px;}
+}
+
+.moveReverse7 {
+    display: flex;
+    animation: moveReverse7 .1s linear forwards;
+}
+
+@keyframes moveReverse7 {
+    from {top: 755px; right: 45px;}
+    to {top: 832px; right: 0;}
+}
+
+
+.share-8 {
+    z-index: 16;
+    right: 0;
+    top: 882px;
+}
+
+.moveUp8 {
+    display: flex;
+    animation: moveUp8 .1s linear forwards;
+}
+
+@keyframes moveUp8 {
+    from {top: 882px; right: 0;}
+    to {top: 810px; right: 45px;}
+}
+
+.moveReverse8 {
+    display: flex;
+    animation: moveReverse8 .1s linear forwards;
+}
+
+@keyframes moveReverse8 {
+    from {top: 810px; right: 45px;}
+    to {top: 882px; right: 0;}
+}
+
+
+.share-9 {
+    z-index: 18;
+    right: 0;
+    top: 932px;
+}
+
+.moveUp9 {
+    display: flex;
+    animation: moveUp9 .1s linear forwards;
+}
+
+@keyframes moveUp9 {
+    from {top: 932px; right: 0;}
+    to {top: 860px; right: 45px;}
+}
+
+.moveReverse9 {
+    display: flex;
+    animation: moveReverse9 .1s linear forwards;
+}
+
+@keyframes moveReverse9 {
+    from {top: 860px; right: 45px;}
+    to {top: 932px; right: 0;}
+}
+
+
+.share-10 {
+    z-index: 20;
+    right: 0;
+    top: 982px;
+}
+
+.moveUp10 {
+    display: flex;
+    animation: moveUp10 .1s linear forwards;
+}
+
+@keyframes moveUp10 {
+    from {top: 982px; right: 0;}
+    to {top: 920px; right: 45px;}
+}
+
+.moveReverse10 {
+    display: flex;
+    animation: moveReverse10 .1s linear forwards;
+}
+
+@keyframes moveReverse10 {
+    from {top: 920px; right: 45px;}
+    to {top: 982px; right: 0;}
 }
 
 
