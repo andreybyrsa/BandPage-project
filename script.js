@@ -118,6 +118,19 @@ function deleteBlock() {
     }
 }
 
+function deleteBlock() {
+    function reverseBlock() {
+        shares[0].block.style.display = 'none'
+        shares[0].block.classList.remove(shares[0].down)
+        shares.pop(shares[0])
+    }
+
+    shares[0].block.classList.remove(shares[0].up)
+    shares[0].block.classList.add(shares[0].down)
+
+    setTimeout(reverseBlock, 100)
+}
+
 closeBlock1.addEventListener('click', function() {
     deleteBlock()
 })
@@ -157,20 +170,6 @@ closeBlock9.addEventListener('click', function() {
 closeBlock10.addEventListener('click', function() {
     deleteBlock()
 })
-
-
-function deleteBlock() {
-    function reverseBlock() {
-        shares[0].block.style.display = 'none'
-        shares[0].block.classList.remove(shares[0].down)
-        shares.pop(shares[0])
-    }
-
-    shares[0].block.classList.remove(shares[0].up)
-    shares[0].block.classList.add(shares[0].down)
-
-    setTimeout(reverseBlock, 100)
-}
 
 
 iconButton1.addEventListener('click', function() {
@@ -427,6 +426,7 @@ let playBlock7 = document.querySelector('.play-block7')
 let playBlock8 = document.querySelector('.play-block8')
 let playBlock9 = document.querySelector('.play-block9')
 let playBlock10 = document.querySelector('.play-block10')
+let learnBlock = document.querySelector('.block-11')
 
 playBlock1.addEventListener('click', function() {
     function removing() {
@@ -486,7 +486,7 @@ playBlock2.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -528,7 +528,7 @@ playBlock3.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -570,7 +570,7 @@ playBlock4.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -612,7 +612,7 @@ playBlock5.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -654,7 +654,7 @@ playBlock6.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -696,7 +696,7 @@ playBlock7.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -738,7 +738,7 @@ playBlock8.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -780,7 +780,7 @@ playBlock9.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -822,7 +822,7 @@ playBlock10.addEventListener('click', function() {
         songs.pop(songs[0])
     }
 
-    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0)) {
+    if (counter2 > counter1 || (counter1 == counter2 & counter1 > 0) || (innerCounter > 0 & counter1 == 0)) {
         pauseButton.classList.add('dark1')
         pauseIcon.classList.add('dark2')
     }
@@ -850,7 +850,8 @@ playBlock10.addEventListener('click', function() {
     songsCounter++
 })
 
-
-
-
-
+learnBlock.addEventListener('click', function() {
+    if (shares.length > 0) {
+        deleteBlock()
+    }
+})

@@ -38,7 +38,6 @@ body {
     left: -40px;
     top: -40px;
     filter: blur(13px);
-    z-index: 1;
 }
 
 
@@ -591,12 +590,6 @@ body {
     height: 100%;
     align-items: center;
     border-bottom: 1px solid rgb(58, 58, 58);
-}
-
-.container__text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .song__text {
