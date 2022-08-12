@@ -351,6 +351,13 @@ let pauseIcon = document.querySelector('.pause__icon')
 let counter1 = 0
 let counter2 = 0
 
+function addClass(buttonType, iconType) {
+    buttonType.classList.remove('dark1')
+    buttonType.classList.add('light1')
+    iconType.classList.remove('dark2')
+    iconType.classList.add('light2')
+}
+
 playButton.addEventListener('click', function() {
     counter1++
 
@@ -381,11 +388,7 @@ playButton.addEventListener('click', function() {
         pauseIcon.classList.add('dark2')
     }
 
-    playButton.classList.remove('dark1')
-    playButton.classList.add('light1')
-    playIcon.classList.remove('dark2')
-    playIcon.classList.add('light2')
-
+    addClass(playButton, playIcon)
 })
 
 let innerCounter = 0
@@ -403,10 +406,7 @@ pauseButton.addEventListener('click', function() {
         playButton.classList.add('dark1')
     }
 
-    pauseButton.classList.remove('dark1')
-    pauseButton.classList.add('light1')
-    pauseIcon.classList.remove('dark2')
-    pauseIcon.classList.add('light2')
+    addClass(pauseButton, pauseIcon)
 
     if (counter1 > 0) {
         counter2++
@@ -426,6 +426,7 @@ let playBlock7 = document.querySelector('.play-block7')
 let playBlock8 = document.querySelector('.play-block8')
 let playBlock9 = document.querySelector('.play-block9')
 let playBlock10 = document.querySelector('.play-block10')
+
 let learnBlock = document.querySelector('.block-11')
 
 playBlock1.addEventListener('click', function() {
