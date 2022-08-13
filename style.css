@@ -151,8 +151,6 @@ body {
     cursor: pointer;
     border: none;
     background-color: transparent;
-    position: relative;
-    right: 5px;
 
     transition: opacity .2s linear;
 }
