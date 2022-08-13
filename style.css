@@ -677,7 +677,7 @@ body {
 .inner__icon {
     display: flex;
     background-color: transparent;
-    border: none;
+    border: 2px solid #fff;
     border-radius: 50%;
     width: 20px;
     height: 20px;
