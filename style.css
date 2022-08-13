@@ -1014,16 +1014,12 @@ body {
 
 /* Footer */
 
-.footer__1, .footer__2 {
+.footer {
     display: block;
     position: relative;
     margin: 20px auto;
 
     width: 400px;
-}
-
-.footer__2 {
-    display: none;
 }
 
 .footer__text {

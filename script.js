@@ -17,7 +17,6 @@ headerButton1.addEventListener('click', function() {
 
     document.querySelector('.music__card__2').style.display = 'block'
     document.querySelector('.music__card__1').style.display = 'none'
-    document.querySelector('.footer__2').style.display = 'none'
 
 })
 
@@ -30,7 +29,6 @@ headerButton2.addEventListener('click', function() {
 
     document.querySelector('.music__card__2').style.display = 'none'
     document.querySelector('.music__card__1').style.display = 'block'
-    document.querySelector('.footer__2').style.display = 'block'
 
     headerCounter++
 })
@@ -114,21 +112,8 @@ function deleteBlock() {
         shares[0].block.classList.remove(shares[0].up)
         shares[0].block.classList.add(shares[0].down)
     
-        setTimeout(reverseBlock, 100)
+        setTimeout(reverseBlock, 30)
     }
-}
-
-function deleteBlock() {
-    function reverseBlock() {
-        shares[0].block.style.display = 'none'
-        shares[0].block.classList.remove(shares[0].down)
-        shares.pop(shares[0])
-    }
-
-    shares[0].block.classList.remove(shares[0].up)
-    shares[0].block.classList.add(shares[0].down)
-
-    setTimeout(reverseBlock, 100)
 }
 
 closeBlock1.addEventListener('click', function() {
