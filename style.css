@@ -214,24 +214,8 @@ body {
     z-index: 1;
 }
 
-.icon__button {
+.icon__button, .copy__icon__button {
     margin-bottom: 12px;
-
-    display: flex;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px #fff solid;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-
-    transition: .2s linear;
-}
-
-.copy__icon__button {
-    margin-bottom: 8px;
 
     display: flex;
     cursor: pointer;
