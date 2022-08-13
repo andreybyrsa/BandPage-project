@@ -146,8 +146,8 @@ body {
 }
 
 .share__button {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -261,8 +261,6 @@ body {
 
 .icon__button:last-child {
     margin-bottom: 0;
-
-    border: none;
 }
 
 .icon {
@@ -1119,7 +1117,7 @@ body {
     
     @keyframes moveUp2 {
         from {top: 582px; right: 0;}
-        to {top: 428px; right: 45px;}
+        to {top: 426px; right: 45px;}
     }
     
     .moveReverse2 {
@@ -1128,7 +1126,7 @@ body {
     }
     
     @keyframes moveReverse2 {
-        from {top: 428px; right: 45px;}
+        from {top: 426px; right: 45px;}
         to {top: 582px; right: 0;}
     }
     
@@ -1200,7 +1198,7 @@ body {
     
     @keyframes moveUp5 {
         from {top: 732px; right: 0;}
-        to {top: 595px; right: 45px;}
+        to {top: 597px; right: 45px;}
     }
     
     .moveReverse5 {
@@ -1209,7 +1207,7 @@ body {
     }
     
     @keyframes moveReverse5 {
-        from {top: 595px; right: 45px;}
+        from {top: 597px; right: 45px;}
         to {top: 732px; right: 0;}
     }
     
