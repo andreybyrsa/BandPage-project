@@ -1054,7 +1054,12 @@ body {
 }
 
 @media (max-width: 450px) {
-    .header, .music__card__2, .song__block, .footer__1, .footer__2, .dunamic__logo, .music__card__1, .media__logo, .artists, .link__block, .feature__block {
+    .header, .music__card__2, .song__block, .footer, .music__card__1, .media__logo, .artists, .link__block, .feature__block {
+        width: 350px;
+    }
+
+    .dunamic__logo {
+        height: 350px;
         width: 350px;
     }
     
