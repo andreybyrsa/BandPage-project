@@ -141,12 +141,13 @@ body {
 
 .sharing__icon {
     width: 100%;
-    height: 25px;
+    height: 100%;
     fill: #fff;
 }
 
 .share__button {
     width: 35px;
+    height: 35px;
     cursor: pointer;
     border: none;
     background-color: transparent;
@@ -254,6 +255,8 @@ body {
 .copy__icon {
     display: block;
     fill: #fff;
+    height: 100%;
+    width: 100%;
 }
 
 .icon__button:last-child {
@@ -265,6 +268,11 @@ body {
 .icon {
     fill: #fff;
     display: block;
+}
+
+.close__icon {
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -1070,10 +1078,274 @@ body {
     .media__container {
         height: 65px;
     }
+
+    .share-1 {
+        z-index: 2;
+        right: 0;
+        top: 532px;
+    }
+    
+    .moveUp1 {
+        display: flex;
+        animation: moveUp1 .1s linear forwards;
+    }
+    
+    @keyframes moveUp1 {
+        from {top: 532px; right: 0;}
+        to {top: 370px; right: 45px;}
+    }
+    
+    .moveReverse1 {
+        display: flex;
+        animation: moveReverse1 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse1 {
+        from {top: 370px; right: 45px;}
+        to {top: 532px; right: 0;}
+    }
+    
+    
+    .share-2 {
+        z-index: 4;
+        right: 0;
+        top: 582px;
+    }
+    
+    .moveUp2 {
+        display: flex;
+        animation: moveUp2 .1s linear forwards;
+    }
+    
+    @keyframes moveUp2 {
+        from {top: 582px; right: 0;}
+        to {top: 428px; right: 45px;}
+    }
+    
+    .moveReverse2 {
+        display: flex;
+        animation: moveReverse2 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse2 {
+        from {top: 428px; right: 45px;}
+        to {top: 582px; right: 0;}
+    }
+    
+    
+    .share-3 {
+        z-index: 6;
+        right: 0;
+        top: 632px;
+    }
+    
+    .moveUp3 {
+        display: flex;
+        animation: moveUp3 .1s linear forwards;
+    }
+    
+    @keyframes moveUp3 {
+        from {top: 632px; right: 0;}
+        to {top: 480px; right: 45px;}
+    }
+    
+    .moveReverse3 {
+        display: flex;
+        animation: moveReverse3 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse3 {
+        from {top: 480px; right: 45px;}
+        to {top: 632px; right: 0;}
+    }
+    
+    
+    .share-4 {
+        z-index: 8;
+        right: 0;
+        top: 682px;
+    }
+    
+    .moveUp4 {
+        display: flex;
+        animation: moveUp4 .1s linear forwards;
+    }
+    
+    @keyframes moveUp4 {
+        from {top: 682px; right: 0;}
+        to {top: 540px; right: 45px;}
+    }
+    
+    .moveReverse4 {
+        display: flex;
+        animation: moveReverse4 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse4 {
+        from {top: 540px; right: 45px;}
+        to {top: 682px; right: 0;}
+    }
+    
+    
+    .share-5 {
+        z-index: 10;
+        right: 0;
+        top: 732px;
+    }
+    
+    .moveUp5 {
+        display: flex;
+        animation: moveUp5 .1s linear forwards;
+    }
+    
+    @keyframes moveUp5 {
+        from {top: 732px; right: 0;}
+        to {top: 595px; right: 45px;}
+    }
+    
+    .moveReverse5 {
+        display: flex;
+        animation: moveReverse5 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse5 {
+        from {top: 595px; right: 45px;}
+        to {top: 732px; right: 0;}
+    }
+    
+    
+    .share-6 {
+        z-index: 12;
+        right: 0;
+        top: 782px;
+    }
+    
+    .moveUp6 {
+        display: flex;
+        animation: moveUp6 .1s linear forwards;
+    }
+    
+    @keyframes moveUp6 {
+        from {top: 782px; right: 0;}
+        to {top: 655px; right: 45px;}
+    }
+    
+    .moveReverse6 {
+        display: flex;
+        animation: moveReverse6 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse6 {
+        from {top: 655px; right: 45px;}
+        to {top: 782px; right: 0;}
+    }
+    
+    
+    .share-7 {
+        z-index: 14;
+        right: 0;
+        top: 832px;
+    }
+    
+    .moveUp7 {
+        display: flex;
+        animation: moveUp7 .1s linear forwards;
+    }
+    
+    @keyframes moveUp7 {
+        from {top: 832px; right: 0;}
+        to {top: 710px; right: 45px;}
+    }
+    
+    .moveReverse7 {
+        display: flex;
+        animation: moveReverse7 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse7 {
+        from {top: 710px; right: 45px;}
+        to {top: 832px; right: 0;}
+    }
+    
+    
+    .share-8 {
+        z-index: 16;
+        right: 0;
+        top: 882px;
+    }
+    
+    .moveUp8 {
+        display: flex;
+        animation: moveUp8 .1s linear forwards;
+    }
+    
+    @keyframes moveUp8 {
+        from {top: 882px; right: 0;}
+        to {top: 765px; right: 45px;}
+    }
+    
+    .moveReverse8 {
+        display: flex;
+        animation: moveReverse8 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse8 {
+        from {top: 765px; right: 45px;}
+        to {top: 882px; right: 0;}
+    }
+    
+    
+    .share-9 {
+        z-index: 18;
+        right: 0;
+        top: 932px;
+    }
+    
+    .moveUp9 {
+        display: flex;
+        animation: moveUp9 .1s linear forwards;
+    }
+    
+    @keyframes moveUp9 {
+        from {top: 932px; right: 0;}
+        to {top: 820px; right: 45px;}
+    }
+    
+    .moveReverse9 {
+        display: flex;
+        animation: moveReverse9 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse9 {
+        from {top: 820px; right: 45px;}
+        to {top: 932px; right: 0;}
+    }
+    
+    
+    .share-10 {
+        z-index: 20;
+        right: 0;
+        top: 982px;
+    }
+    
+    .moveUp10 {
+        display: flex;
+        animation: moveUp10 .1s linear forwards;
+    }
+    
+    @keyframes moveUp10 {
+        from {top: 982px; right: 0;}
+        to {top: 875px; right: 45px;}
+    }
+    
+    .moveReverse10 {
+        display: flex;
+        animation: moveReverse10 .1s linear forwards;
+    }
+    
+    @keyframes moveReverse10 {
+        from {top: 875px; right: 45px;}
+        to {top: 982px; right: 0;}
+    }
+
 }
-
-
-
-
-
-
