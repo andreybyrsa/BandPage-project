@@ -1,0 +1,20 @@
+{
+  "name": "bandpage-project",
+  "version": "1.0.0",
+  "description": "This work contains music parts, which you can listen without other web-site links",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22"
+  }
+}
